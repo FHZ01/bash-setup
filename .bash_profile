@@ -12,3 +12,5 @@ else \
   # @2 - Prompt when not in GIT repo
 echo " '$Yellow$PathShort$Color_Off'\$ "; \
 fi)'
+
+$ export PS1="\[$(tput bold)$(tput setb 4)$(tput setaf 7)\]\u@\h:\w $ \[$(tput sgr0)\]"
