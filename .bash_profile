@@ -14,3 +14,11 @@ echo " '$Yellow$PathShort$Color_Off'\$ "; \
 fi)'
 
 $ export PS1="\[$(tput bold)$(tput setb 4)$(tput setaf 7)\]\u@\h:\w $ \[$(tput sgr0)\]"
+
+# Another simple one
+function pc {
+  [ -d .git ] && git name-rev --name-only @
+}
+PS1='\e[33m\w \e[36m$(pc)\e[m\n$ '
+
+export PS1
